@@ -24,22 +24,6 @@ services:
       timeout: 5s
       retries: 5
 
-  # alloy:
-  #   image: grafana/alloy:latest
-  #   container_name: alloy
-  #   restart: unless-stopped
-  #   user: "0:0"
-  #   volumes:
-  #     - /var/run/docker.sock:/var/run/docker.sock:ro
-  #     - ./alloy/config.alloy:/etc/alloy/config.alloy:ro
-  #     - alloy_data:/var/lib/alloy/data
-  #   command: run --server.http.listen-addr=0.0.0.0:12345 /etc/alloy/config.alloy
-  #   networks:
-  #     - monitoring
-  #   depends_on:
-  #     loki:
-  #       condition: service_healthy
-
   promtail:
     image: grafana/promtail:3.4.2
     container_name: promtail
@@ -288,8 +272,6 @@ volumes:
   loki_data:
     driver: local
   promtail_positions:
-    driver: local
-  alloy_data:
     driver: local
   grafana_data:
     driver: local

@@ -1,0 +1,12 @@
+# Secrets
+docker/.env
+
+# Local tool state
+.codex
+.idea/
+.vscode/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.log
