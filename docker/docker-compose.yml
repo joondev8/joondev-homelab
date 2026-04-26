@@ -196,7 +196,7 @@ services:
     depends_on:
       - grafana
       - prometheus
-      - portainer      
+      - portainer
       - dozzle
 
   uptime-kuma:
